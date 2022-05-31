@@ -14,7 +14,7 @@ const CheckoutForm = ({ data }) => {
 
 
     useEffect(() => {
-        fetch('http://localhost:8000/create-payment-intent', {
+        fetch('https://fast-depths-70621.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -83,7 +83,7 @@ const CheckoutForm = ({ data }) => {
                 data: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`http://localhost:8000/my-orders/${_id}`, {
+            fetch(`https://fast-depths-70621.herokuapp.com/my-orders/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

@@ -16,7 +16,7 @@ const Purchase = () => {
 
     const [item, setItem] = useState([])
     useEffect(() => {
-        const url = `http://localhost:8000/parts/${id}`
+        const url = `https://fast-depths-70621.herokuapp.com/parts/${id}`
         fetch(url, {
             method: 'GET',
             headers: {
@@ -50,7 +50,7 @@ const Purchase = () => {
             totalPrice: totalPrice,
             image: image
         }
-        fetch('http://localhost:8000/orders', {
+        fetch('https://fast-depths-70621.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

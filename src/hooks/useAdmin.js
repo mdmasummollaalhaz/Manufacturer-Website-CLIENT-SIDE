@@ -9,7 +9,7 @@ const useAdmin = () => {
     const [user] = useAuthState(auth)
     // const [adminLoading, setAdminLoading] = useState(true);
     useEffect(() => {
-        const url = `http://localhost:8000/user/admin?email=${user.email}`
+        const url = `https://fast-depths-70621.herokuapp.com/user/admin?email=${user.email}`
         fetch(url, {
             method: 'GET',
             headers: {

@@ -10,7 +10,7 @@ const MyOrders = () => {
     const [user] = useAuthState(auth)
     useEffect(() => {
         if (user) {
-            const url = `http://localhost:8000/my-orders?email=${user.email}`
+            const url = `https://fast-depths-70621.herokuapp.com/my-orders?email=${user.email}`
             fetch(url, {
                 method: 'GET',
                 headers: {
@@ -46,7 +46,7 @@ const MyOrders = () => {
                     'success'
                 )
 
-                const url = `http://localhost:8000/my-orders/${id}`
+                const url = `https://fast-depths-70621.herokuapp.com/my-orders/${id}`
                 fetch(url, {
                     method: 'DELETE'
                 })

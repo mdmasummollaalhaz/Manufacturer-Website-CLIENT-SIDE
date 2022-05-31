@@ -5,7 +5,7 @@ const UserRow = ({ user, index }) => {
     const { email, role } = user;
 
     const makeAdmin = () => {
-        const url = `http://localhost:8000/user/admin/${email}`
+        const url = `https://fast-depths-70621.herokuapp.com/user/admin/${email}`
         fetch(url, {
             method: 'PUT',
             headers: {

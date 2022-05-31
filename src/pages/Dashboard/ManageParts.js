@@ -6,7 +6,7 @@ const ManageParts = () => {
     const navigate = useNavigate()
     const [parts, setParts] = useState([])
     useEffect(() => {
-        const url = `http://localhost:8000/parts`
+        const url = `https://fast-depths-70621.herokuapp.com/parts`
         fetch(url, {
             method: 'GET',
             headers: {
@@ -41,7 +41,7 @@ const ManageParts = () => {
                     'success'
                 )
 
-                const url = `http://localhost:8000/parts/${id}`
+                const url = `https://fast-depths-70621.herokuapp.com/parts/${id}`
                 fetch(url, {
                     method: 'DELETE',
                     headers: {

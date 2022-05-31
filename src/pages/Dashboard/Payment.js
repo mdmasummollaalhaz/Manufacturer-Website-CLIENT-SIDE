@@ -7,14 +7,14 @@ import Loading from '../../share/Loading/Loading';
 import CheckoutForm from './CheckoutForm';
 
 // Stript key
-const stripePromise = loadStripe('pk_test_51L2CchEoX6fuQUx0c9SqsfZgj7XGHKJVy2uyJMQ6oV14ihJ71q3WejrbYjDhQMvdGy3oidgS0QF5XCPNWgI9VIxA00lkPN2G6P');
+const stripePromise = loadStripe('pk_test_51L4H65Ivx12FIDxg0X9vOghGiPlHkHQNWvJQUCMMlGq6W69r8pJ0MXyTrEHsbWhFYCuqiDBnaAzVclQ2OswOJAah00WGDb6GlS');
 
 
 const Payment = () => {
     const navigate = useNavigate()
     const { id } = useParams()
 
-    const url = `http://localhost:8000/my-orders/${id}`
+    const url = `https://fast-depths-70621.herokuapp.com/my-orders/${id}`
     const { data, myOrder, isLoading, user } = useQuery('order', () => fetch(url, {
         method: 'GET',
         headers: {

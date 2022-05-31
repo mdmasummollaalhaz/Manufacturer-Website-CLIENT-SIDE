@@ -4,7 +4,7 @@ import PartsItem from './PartsItem';
 const Parts = () => {
     const [parts, setParts] = useState([])
     useEffect(() => {
-        const url = 'http://localhost:8000/parts'
+        const url = 'https://fast-depths-70621.herokuapp.com/parts'
         fetch(url, {
             method: 'GET',
             headers: {

@@ -18,7 +18,7 @@ const AddReview = () => {
         const newReview = { ratting, reviewText, name, email }
 
         // Post reviews to server
-        const url = 'http://localhost:8000/reviews'
+        const url = 'https://fast-depths-70621.herokuapp.com/reviews'
         fetch(url, {
             method: 'POST',
             headers: {

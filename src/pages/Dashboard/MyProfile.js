@@ -15,7 +15,7 @@ const MyProfile = () => {
 
 
     useEffect(() => {
-        const uUrl = `http://localhost:8000/user?email=${email}`
+        const uUrl = `https://fast-depths-70621.herokuapp.com/user?email=${email}`
         fetch(uUrl, {
             method: 'GET',
             headers: {
@@ -52,7 +52,7 @@ const MyProfile = () => {
         setUserProfile(updateUser)
 
         // post user to server
-        const url = `http://localhost:8000/users?email=${email}`
+        const url = `https://fast-depths-70621.herokuapp.com/users?email=${email}`
         fetch(url, {
             method: 'PUT',
             headers: {

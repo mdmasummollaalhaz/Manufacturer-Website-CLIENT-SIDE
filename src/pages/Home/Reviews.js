@@ -7,7 +7,7 @@ import ReactStars from 'react-rating-stars-component';
 
 const Reviews = () => {
     const { isLoading, error, data } = useQuery('Reviews', () =>
-        fetch('http://localhost:8000/reviews').then(res => res.json()))
+        fetch('https://fast-depths-70621.herokuapp.com/reviews').then(res => res.json()))
 
     if (isLoading) {
         return <Loading />

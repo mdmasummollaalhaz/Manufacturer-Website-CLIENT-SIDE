@@ -6,7 +6,7 @@ const AllUsers = () => {
     const navigate = useNavigate()
     const [users, setUsers] = useState([])
     useEffect(() => {
-        const url = `http://localhost:8000/users`
+        const url = `https://fast-depths-70621.herokuapp.com/users`
         fetch(url, {
             method: 'GET',
             headers: {

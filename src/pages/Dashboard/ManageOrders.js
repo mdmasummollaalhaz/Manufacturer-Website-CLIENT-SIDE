@@ -6,7 +6,7 @@ const ManageOrders = () => {
     const navigate = useNavigate()
     const [orders, setOrders] = useState([])
     useEffect(() => {
-        const url = `http://localhost:8000/orders`
+        const url = `https://fast-depths-70621.herokuapp.com/orders`
         fetch(url, {
             method: 'GET',
             headers: {
@@ -25,7 +25,7 @@ const ManageOrders = () => {
 
     // make order shipped
     const makeShipped = (id) => {
-        const url = `http://localhost:8000/orders/${id}`
+        const url = `https://fast-depths-70621.herokuapp.com/orders/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -55,7 +55,7 @@ const ManageOrders = () => {
                     'success'
                 )
 
-                const url = `http://localhost:8000/order/${id}`
+                const url = `https://fast-depths-70621.herokuapp.com/order/${id}`
                 fetch(url, {
                     method: 'DELETE',
                     headers: {
